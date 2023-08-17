@@ -1,3 +1,13 @@
+record mp4
+$ roslaunch audio_capture capture_to_file.launch 
+
+
+<setting device>
+arecord -l will show available input devices, use the card number as
+the first number and the subdevice number as the second in a string
+like hw:1,0
+
+
 # ROS audio\_common Package
 
 [![ROS1 CI](https://github.com/ros-drivers/audio_common/actions/workflows/main.yml/badge.svg)](https://github.com/ros-drivers/audio_common/actions/workflows/main.yml)
