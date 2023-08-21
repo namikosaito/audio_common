@@ -7,7 +7,7 @@ import numpy as np
 mic_number = 4 
 
 for m in range(mic_number):
-    rate, data = wavfile.read('output' + str(m+1) +'.mp3')  # read mp3 or wav file
+    rate, data = wavfile.read('/home/namiko/catkin_ws/src/audio_common/recorded_data/output' + str(m+1) +'.mp3')  # read mp3 or wav file
     print(m, "rate:", rate, ",  data:", data)
 
     # raw_data
