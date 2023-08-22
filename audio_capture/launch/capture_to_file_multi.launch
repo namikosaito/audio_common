@@ -1,5 +1,8 @@
+<!-- if dst ==appsink, flow to topic  -->
+
 <launch>
   <arg name="dst_1" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output1.mp3"/>
+  <!-- <arg name="dst_1" default="appsink"/> -->
   <arg name="device_1" default="hw:2,0"/>
   <arg name="format" default="wave"/>
   <arg name="bitrate" default="128"/>
@@ -11,16 +14,19 @@
   <arg name="audio_topic_1" default="audio"/>
 
   <arg name="dst_2" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output2.mp3"/>
+  <!-- <arg name="dst_2" default="appsink"/> -->
   <arg name="device_2" default="hw:3,0"/>
   <arg name="ns_2" default="audio2"/>
   <arg name="audio_topic_2" default="audio"/>
 
   <arg name="dst_3" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output3.mp3"/>
+  <!-- <arg name="dst_3" default="appsink"/> -->
   <arg name="device_3" default="hw:4,0"/>
   <arg name="ns_3" default="audio3"/>
   <arg name="audio_topic_3" default="audio"/>
 
   <arg name="dst_4" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output4.mp3"/>
+  <!-- <arg name="dst_4" default="appsink"/> -->
   <arg name="device_4" default="hw:5,0"/>
   <arg name="ns_4" default="audio4"/>
   <arg name="audio_topic_4" default="audio"/>
