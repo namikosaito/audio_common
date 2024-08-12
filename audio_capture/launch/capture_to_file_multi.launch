@@ -1,9 +1,9 @@
 <!-- if dst ==appsink, flow to topic  -->
 
 <launch>
-  <arg name="dst_1" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output1.mp3"/>
-  <!-- <arg name="dst_1" default="appsink"/> -->
-  <arg name="device_1" default="hw:2,0"/>
+  <!-- <arg name="dst_1" default="/home/nextaged/moonshot_ws/src/moonshot_demo_sensor/record_audio/output1.mp3"/> -->
+  <arg name="dst_1" default="appsink"/>
+  <arg name="device_1" default="hw:1,0"/>
   <arg name="format" default="wave"/>
   <arg name="bitrate" default="128"/>
   <arg name="channels" default="1"/>
@@ -13,23 +13,11 @@
   <arg name="ns_1" default="audio1"/>
   <arg name="audio_topic_1" default="audio"/>
 
-  <arg name="dst_2" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output2.mp3"/>
-  <!-- <arg name="dst_2" default="appsink"/> -->
+  <!-- <arg name="dst_2" default="/home/nextaged/moonshot_ws/src/moonshot_demo_sensor/record_audio/output2.mp3"/> -->
+  <arg name="dst_2" default="appsink"/>
   <arg name="device_2" default="hw:3,0"/>
   <arg name="ns_2" default="audio2"/>
   <arg name="audio_topic_2" default="audio"/>
-
-  <arg name="dst_3" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output3.mp3"/>
-  <!-- <arg name="dst_3" default="appsink"/> -->
-  <arg name="device_3" default="hw:4,0"/>
-  <arg name="ns_3" default="audio3"/>
-  <arg name="audio_topic_3" default="audio"/>
-
-  <arg name="dst_4" default="/home/namiko/catkin_ws/src/audio_common/recorded_data/output4.mp3"/>
-  <!-- <arg name="dst_4" default="appsink"/> -->
-  <arg name="device_4" default="hw:5,0"/>
-  <arg name="ns_4" default="audio4"/>
-  <arg name="audio_topic_4" default="audio"/>
 
   <include file="$(find audio_capture)/launch/capture.launch">
     <arg name="dst" value="$(arg dst_1)"/>
@@ -57,30 +45,4 @@
     <arg name="audio_topic" value="$(arg audio_topic_2)"/>
   </include>
 
-  <include file="$(find audio_capture)/launch/capture.launch">
-    <arg name="dst" value="$(arg dst_3)"/>
-    <arg name="device" value="$(arg device_3)"/>
-    <arg name="format" value="$(arg format)"/>
-    <arg name="bitrate" value="$(arg bitrate)"/>
-    <arg name="channels" value="$(arg channels)"/>
-    <arg name="depth" value="$(arg depth)"/>
-    <arg name="sample_rate" value="$(arg sample_rate)"/>
-    <arg name="sample_format" value="$(arg sample_format)"/>
-    <arg name="ns" value="$(arg ns_3)"/>
-    <arg name="audio_topic" value="$(arg audio_topic_3)"/>
-  </include>
-
-  <include file="$(find audio_capture)/launch/capture.launch">
-    <arg name="dst" value="$(arg dst_4)"/>
-    <arg name="device" value="$(arg device_4)"/>
-    <arg name="format" value="$(arg format)"/>
-    <arg name="bitrate" value="$(arg bitrate)"/>
-    <arg name="channels" value="$(arg channels)"/>
-    <arg name="depth" value="$(arg depth)"/>
-    <arg name="sample_rate" value="$(arg sample_rate)"/>
-    <arg name="sample_format" value="$(arg sample_format)"/>
-    <arg name="ns" value="$(arg ns_4)"/>
-    <arg name="audio_topic" value="$(arg audio_topic_4)"/>
-  </include>
- 
 </launch>
