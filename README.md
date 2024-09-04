@@ -1,3 +1,10 @@
+Installation tutorial is here
+http://wiki.ros.org/audio_common/Tutorials/Streaming%20audio
+
+You may need install GStreamer
+https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c
+
+
 record mp4
 $ roslaunch audio_capture capture_to_file.launch 
 
